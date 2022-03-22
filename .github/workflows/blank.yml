@@ -3,9 +3,8 @@ with:
   url: 'http://3.87.1.30/'
 
 
-  on:
-  schedule:
-    - cron:  0 10 * * *
+  on: [push]
+  
 jobs:
   wpscan:
     runs-on: ubuntu-latest
