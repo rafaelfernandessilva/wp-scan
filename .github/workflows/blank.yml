@@ -3,8 +3,9 @@ with:
   url: 'http://3.87.1.30/'
 
 
-  on: [push]
-  
+  on:
+  push:
+    branches: [ main ]
 jobs:
   wpscan:
     runs-on: ubuntu-latest
