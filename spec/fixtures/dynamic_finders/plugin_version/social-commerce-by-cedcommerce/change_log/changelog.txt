@@ -1,4 +1,0 @@
-*** Instagram Connector For Woocommerce Changelog ***
-
-2020-09-21 - version 1.0.0
-* Inital release

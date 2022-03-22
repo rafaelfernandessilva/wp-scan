@@ -1,6 +1,0 @@
-=== WordPress Keyword Finder Changelog ===
-
-/* First Release
--Date: xx.xx.xxxx
--Version: 1.0
-*/

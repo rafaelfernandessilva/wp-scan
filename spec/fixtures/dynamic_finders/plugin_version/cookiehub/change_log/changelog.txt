@@ -1,6 +1,0 @@
-=== CookieHub ===
-
-= 0.1 =
-*Release Date - 28 September 2020*
-
-Initial release

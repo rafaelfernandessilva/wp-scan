@@ -1,7 +1,0 @@
-=== Poslogic Credit Gateway ===
-
-= 1.0.0 =
-*Release Date - 26rd August, 2020*
-
-First stable version
-

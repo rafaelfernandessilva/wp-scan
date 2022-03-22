@@ -1,4 +1,0 @@
-*** Auto download by Michael Willems Changelog ***
-
-2021-06-14 - version 1.0.0
-* First release.

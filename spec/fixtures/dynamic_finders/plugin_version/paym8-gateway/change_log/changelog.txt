@@ -1,4 +1,0 @@
-*** PayM8 Payments Gateway Plugin Changelog ***
-
-2021-12-08 - version 1.0
-* Initial release
