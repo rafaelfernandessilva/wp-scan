@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 name: Check Vulnerability
 
 on:
 # o action é acionado sepmre que houver um push na branch main e também uma cron no qual é executada todos os dias as 0hrs
-=======
-name: Check
 
-on:
->>>>>>> e51875820517162b1ed4772b83649107c992cadf
   push:
     branches: [ main ]
    schedule:
