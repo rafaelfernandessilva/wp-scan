@@ -1,6 +1,6 @@
-name: check_vulnerability
+name: Check
 
-  on:
+on:
   push:
     branches: [ main ]
 jobs:
