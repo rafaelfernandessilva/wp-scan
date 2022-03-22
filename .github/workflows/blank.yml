@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     schedule:
-    - cron: "0 0 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+    - cron: "*/5 * * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
   wpscan:
     runs-on: ubuntu-latest
