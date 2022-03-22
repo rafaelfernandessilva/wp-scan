@@ -1,24 +1,21 @@
-name: Check Vulnerability
+name: Check
 
 on:
-# o action é acionado sepmre que houver um push na branch main e também uma cron no qual é executada todos os dias as 0hrs
-
   push:
     branches: [ main ]
-   schedule:
+    schedule:
     - cron: "0 0 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
-
 jobs:
   wpscan:
     runs-on: ubuntu-latest
     steps:
-       - name: WPScan
+      - name: WPScan
         uses: WTFender/wpscan-action@v1.0
         id: wpscan
         with:
           url: 'http://3.87.1.30/'
           token: ${{ secrets.WPSCAN_TOKEN }}
-          webhook: ${{ secrets.SLACK_WEBHOOK }}
+          
       - name: Scan Results
         run: |
           echo ${{ steps.wpscan.outputs.resultb64 }}
