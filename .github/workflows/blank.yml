@@ -2,7 +2,7 @@ name: Check Vulnerability
 
 on:
   schedule:
-    - cron: "* 21 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+    - cron: "* 9 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
   wpscan:
     runs-on: ubuntu-latest
