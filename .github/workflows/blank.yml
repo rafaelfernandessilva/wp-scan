@@ -7,7 +7,7 @@ on:
       [main]
     
   schedule:
-    - cron: "40 16 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+    - cron: "55 16 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
   wpscan:
     runs-on: ubuntu-latest
@@ -17,7 +17,8 @@ jobs:
         id: wpscan
         with:
           url: 'http://34.229.201.190/'
-          token: IcF4Vf9IxwxikshgF5IWUAD9HPepAUphk20Dyq65QxY
+          token: ${{ secrets.WPSCAN_TOKEN }}
+        # token: IcF4Vf9IxwxikshgF5IWUAD9HPepAUphk20Dyq65QxY
           webhook: $${{ secrets.SLACK_WEBHOOK }}
           
 
