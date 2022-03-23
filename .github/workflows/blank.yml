@@ -17,7 +17,7 @@ jobs:
         id: wpscan
         with:
           url: 'http://34.229.201.190/'
-          token: ${{ secrets.WPSCAN_TOKEN }}
+          token: IcF4Vf9IxwxikshgF5IWUAD9HPepAUphk20Dyq65QxY
           webhook: $${{ secrets.SLACK_WEBHOOK }}
           
 
