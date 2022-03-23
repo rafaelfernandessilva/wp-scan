@@ -7,13 +7,13 @@ on:
       [main]
     
   schedule:
-    - cron: "10 14 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+    - cron: "30 14 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
   wpscan:
     runs-on: ubuntu-latest
     steps:
       - name: WPScan
-        uses: WTFender/wpscan-action@v3.8.21
+        uses: WTFender/wpscan-action@v1.0
         id: wpscan
         with:
           url: 'http://34.229.201.190/'
