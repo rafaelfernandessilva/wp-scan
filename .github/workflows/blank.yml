@@ -11,7 +11,7 @@ jobs:
         uses: WTFender/wpscan-action@v1.0
         id: wpscan
         with:
-          url: 'http://3.87.1.30/'
+          url: 'http://34.229.201.190/'
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: $${{ secrets.SLACK_WEBHOOK }}
           
