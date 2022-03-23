@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: WPScan
-        uses: WTFender/wpscan-action@3.8.21
+        uses: WTFender/wpscan-action@v3.8.21
         id: wpscan
         with:
           url: 'http://34.229.201.190/'
