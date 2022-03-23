@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: WPScan
-        uses: rafaelfernandessilva/wpscan@v1.0
+        uses: rafaelfernandessilva/wpscan
         id: wpscan
         with:
           url: 'http://34.229.201.190/'
