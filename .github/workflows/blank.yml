@@ -1,6 +1,11 @@
 name: Check Vulnerability
 
 on:
+
+  push:
+    branches:  
+      [main]
+    
   schedule:
     - cron: "*/05 * * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
