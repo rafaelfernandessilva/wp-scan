@@ -23,5 +23,6 @@ jobs:
 
       - name: Scan Results
         run: |
+          echo "teste teste teste"
           echo ${{ steps.wpscan.outputs.resultb64 }}
           echo ${{ steps.wpscan.outputs.result }}
