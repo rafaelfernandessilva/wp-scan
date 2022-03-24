@@ -19,7 +19,7 @@ jobs:
         id: wpscan
         with:
           
-          url: 'https://blog.melhorenvio.com.br/'
+          url: 'http://34.229.201.190/'
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
