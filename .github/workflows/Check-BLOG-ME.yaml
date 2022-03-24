@@ -1,27 +1,24 @@
-
-name: Check Blog ME
+name: BLOG ME
 
 on:
 
   push:
-  #  branches:  
-  #    [main]
+    branches:  
+      [main]
     
   schedule:
-    - cron: "00 13 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+    - cron: "45 13 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
   wpscan:
     runs-on: ubuntu-latest
-    env:
-      SLACK_WEBHOOK: DZxctA7Pn0nftY5Isx22ZxJUyf3rcCEAQJFcccO5oKo
     steps:
       - name: WPScan
         uses: WTFender/wpscan-action@v1.0
         id: wpscan
         with:
           url: 'https://blog.melhorenvio.com.br/'
-          token: ${{ env.WPSCAN_TOKEN }}
-         #webhook: $${{ secrets.SLACK_WEBHOOK }}
+          token: ${{ secrets.WPSCAN_TOKEN }}
+          webhook: $${{ secrets.SLACK_WEBHOOK }}
           
 
       - name: Scan Results
