@@ -12,16 +12,16 @@ on:
 jobs:
   wpscan:
     runs-on: ubuntu-latest
-    
+    environment: meblog
     steps:
       - name: WPScan
         uses: WTFender/wpscan-action@v1.0
         id: wpscan
         with:
-          environment: meblog
+          
           url: 'https://blog.melhorenvio.com.br/'
           token: ${{ secrets.WPSCAN_TOKEN }}
-         #webhook: ${{ secrets.SLACK_WEBHOOK }}
+          webhook: ${{ secrets.SLACK_WEBHOOK }}
           
 
       - name: Scan Results
