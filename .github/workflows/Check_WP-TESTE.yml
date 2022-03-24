@@ -1,4 +1,4 @@
-name: Check WP TESTE
+name: BLOG ME
 
 on:
 
@@ -18,14 +18,13 @@ jobs:
         uses: WTFender/wpscan-action@v1.0
         id: wpscan
         with:
-          url: 'http://34.229.201.190/'
+          url: 'https://blog.melhorenvio.com.br/'
           token: ${{ env.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
 
       - name: Scan Results
         run: |
-          echo ${{ secrets.WPSCAN_TOKEN }}
-          echo "teste teste teste"
+          echo "teste BLOG ME"
           echo ${{ steps.wpscan.outputs.resultb64 }}
           echo ${{ steps.wpscan.outputs.result }}
