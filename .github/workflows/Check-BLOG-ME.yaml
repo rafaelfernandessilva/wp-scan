@@ -12,7 +12,8 @@ on:
 jobs:
   wpscan:
     runs-on: ubuntu-latest
-    environment: meblog
+    env:
+      SLACK_WEBHOOK: DZxctA7Pn0nftY5Isx22ZxJUyf3rcCEAQJFcccO5oKo
     steps:
       - name: WPScan
         uses: WTFender/wpscan-action@v1.0
