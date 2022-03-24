@@ -1,5 +1,5 @@
 
-name: Check Vulnerability
+name: Check Blog ME
 
 on:
 
@@ -8,7 +8,7 @@ on:
       [main]
     
   schedule:
-    - cron: "45 12 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+    - cron: "00 13 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
 jobs:
   wpscan:
     runs-on: ubuntu-latest
