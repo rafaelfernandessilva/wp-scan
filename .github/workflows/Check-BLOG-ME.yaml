@@ -4,8 +4,8 @@ name: Check Blog ME
 on:
 
   push:
-    branches:  
-      [main]
+  #  branches:  
+  #    [main]
     
   schedule:
     - cron: "00 13 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
