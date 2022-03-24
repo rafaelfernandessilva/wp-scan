@@ -1,1 +1,30 @@
 
+name: Check Vulnerability
+
+on:
+
+  push:
+    branches:  
+      [main]
+    
+  schedule:
+    - cron: "30 12 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
+jobs:
+  wpscan:
+    runs-on: ubuntu-latest
+    environment: meblog
+    steps:
+      - name: WPScan
+        uses: WTFender/wpscan-action@v1.0
+        id: wpscan
+        with:
+          url: 'https://blog.melhorenvio.com.br/'
+          token: ${{ secrets.WPSCAN_TOKEN }}
+         #webhook: $${{ secrets.SLACK_WEBHOOK }}
+          
+
+      - name: Scan Results
+        run: |
+          echo "teste teste teste"
+          echo ${{ steps.wpscan.outputs.resultb64 }}
+          echo ${{ steps.wpscan.outputs.result }}
