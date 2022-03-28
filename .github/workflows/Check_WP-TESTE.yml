@@ -3,8 +3,8 @@ name: BLOG ME
 on:
 
   push:
-  #  branches:  
-  #    [main]
+    branches:  
+      [main]
     
   schedule:
     - cron: "30 14 * * *" #cron baseada em min/hora/dia_mês/mês/dia_semana
@@ -19,13 +19,13 @@ jobs:
         id: wpscan
         with:
           
-          url: 'http://34.229.201.190/'
+          url: 'https://meajuda.melhorenvio.com.br/'
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
 
       - name: Scan Results
         run: |
-          echo "teste BLOG ME"
+          
           echo ${{ steps.wpscan.outputs.resultb64 }}
           echo ${{ steps.wpscan.outputs.result }}
