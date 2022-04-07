@@ -21,7 +21,7 @@ jobs:
           
           #url: 'https://meajuda.melhorenvio.com.br'
           url: https://blog.melhorenvio.com.br/wp-login.php
-          token: ${{ secrets.WPSCAN_TOKEN }}
+          #token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
 
