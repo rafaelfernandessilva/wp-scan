@@ -19,7 +19,7 @@ jobs:
         id: wpscan
         with:
           
-          url: 'https://store-staging.melhorenvio.work/'
+          url: 'https://ajuda.melhorenvio.com.br/'
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
