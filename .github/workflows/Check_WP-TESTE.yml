@@ -19,7 +19,7 @@ jobs:
         id: wpscan
         with:
           
-          url: 'https://ajuda.melhorenvio.com.br/'
+          url: 'https://meajuda.melhorenvio.com.br/'
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
