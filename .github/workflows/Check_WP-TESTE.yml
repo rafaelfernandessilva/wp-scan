@@ -19,7 +19,7 @@ jobs:
         id: wpscan
         with:
           
-          url: 'https://blog.melhorenvio.com.br/ --random-user-agent'
+          url: 'https://meajuda.melhorenvio.com.br --random-user-agent'
           #url: https://blog.melhorenvio.com.br/wp-login.php
           #token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
