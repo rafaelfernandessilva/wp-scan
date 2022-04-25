@@ -23,6 +23,7 @@ jobs:
           url: 'https://meajuda.melhorenvio.com.br/login --random-user-agent'
           #url: 'https://store-staging.melhorenvio.work/ --random-user-agent'
           #url: https://blog.melhorenvio.com.br/wp-login.php
+          options: --scope
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
