@@ -20,10 +20,10 @@ jobs:
         with:
           
           
-          url: 'https://meajuda.melhorenvio.com.br/login '
+          url: 'https://meajuda.melhorenvio.com.br/login --random-user-agent'
           #url: 'https://store-staging.melhorenvio.work/ --random-user-agent'
           #url: https://blog.melhorenvio.com.br/wp-login.php
-          options: --scope --random-user-agent --disable-tls-checks
+          options: --scope wp-content --random-user-agent --disable-tls-checks
           token: ${{ secrets.WPSCAN_TOKEN }}
           webhook: ${{ secrets.SLACK_WEBHOOK }}
           
