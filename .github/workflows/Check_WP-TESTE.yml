@@ -20,7 +20,7 @@ jobs:
         with:
           
           
-          url: 'https://meajuda.melhorenvio.com.br/login --random-user-agent'
+          url: 'https://meajuda.melhorenvio.com.br/wp-content/ --random-user-agent'
           #url: 'https://store-staging.melhorenvio.work/ --random-user-agent'
           #url: https://blog.melhorenvio.com.br/wp-login.php
           #token: ${{ secrets.WPSCAN_TOKEN }}
