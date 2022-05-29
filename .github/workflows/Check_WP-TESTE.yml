@@ -1,4 +1,4 @@
-name: BLOG ME
+name: REMOVE IP
 
 on:
 
@@ -8,13 +8,8 @@ on:
 jobs:
   Remove-IP:
     runs-on: ubuntu-latest
-    steps:
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::459826126373:role/remove-ip
-          aws-region: us-east-2
-
+      steps:
+      - uses: actions/checkout@v2
       - name: Remove ip 
         run: |
           aws ec2 revoke-security-group-ingress \
@@ -22,4 +17,6 @@ jobs:
           --protocol tcp \
           --port 22\
           --cidr 138.36.230.92/32
-          
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
