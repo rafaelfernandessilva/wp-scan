@@ -8,15 +8,15 @@ on:
 jobs:
   Remove-IP:
     runs-on: ubuntu-latest
-      steps:
-      - uses: actions/checkout@v2
-      - name: Remove ip 
-        run: |
-          aws ec2 revoke-security-group-ingress \
-          --group-name launch-wizard-3  \
-          --protocol tcp \
-          --port 22\
-          --cidr 138.36.230.92/32
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Remove ip 
+      run: |
+        aws ec2 revoke-security-group-ingress \
+        --group-name launch-wizard-3  \
+        --protocol tcp \
+        --port 22\
+        --cidr 138.36.230.92/32
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
