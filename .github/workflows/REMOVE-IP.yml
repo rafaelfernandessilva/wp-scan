@@ -19,12 +19,12 @@ jobs:
           --group-id sg-04d9ca0541efd2157 \
           --ip-permissions "[ \
                               { \
-                              \"IpProtocol\": \"tcp\", \
-                              \"FromPort\": 22, \
-                              \"ToPort\": 22, \
-                              \"IpRanges\": [ \
+                              \"IpProtocol\":\"tcp\", \
+                              \"FromPort\":22, \
+                              \"ToPort\":22, \
+                              \"IpRanges\":[ \
                                               { \
-                                              \"CidrIp\": \"138.36.230.92/32\" \
+                                              \"CidrIp\":\"138.36.230.92/32\" \
                                               } \
                                             ] \
                               } \
