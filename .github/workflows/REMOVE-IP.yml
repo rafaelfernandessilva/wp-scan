@@ -20,5 +20,5 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
           aws-region: us-east-2
-          role-session-name: remove-ip
+          role-session-name: remover-ip
     
