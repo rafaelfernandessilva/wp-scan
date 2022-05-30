@@ -21,4 +21,9 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
           aws-region: us-east-2
           role-session-name: remover-ip
+        
+      - name: Teste Connection AWS
+        run: |
+          aws ec2 describe-instances
+        
     
