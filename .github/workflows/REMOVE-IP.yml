@@ -8,6 +8,9 @@ on:
 jobs:
   Remove-IP:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     environment: personal
     steps:
       - name: 'Checkout'
