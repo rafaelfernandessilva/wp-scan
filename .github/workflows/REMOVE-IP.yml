@@ -22,4 +22,3 @@ jobs:
           aws-region: us-east-2
           role-session-name: remove-ip
     
-    
