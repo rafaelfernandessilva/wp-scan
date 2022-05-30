@@ -24,11 +24,5 @@ jobs:
         
       - name: Teste Connection AWS
         run: |
-          aws ec2 revoke-security-group-ingress \
-          --group-name launch-wizard-3  \
-          --protocol tcp \
-          --port 22\
-          --cidr 138.36.230.92/32
+          aws ec2 revoke-security-group-ingress --group-name launch-wizard-3 --protocol tcp --port 22 --cidr 138.36.230.92/32
 
-        
-    
