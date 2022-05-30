@@ -15,10 +15,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: us-east-2
         
-      run: |
-        aws ec2 revoke-security-group-ingress \
-        --group-name launch-wizard-3 \
-        --protocol tcp  \
-        --port 22 \  
-        --cidr 138.36.230.92/32
-
+      run: aws ec2 revoke-security-group-ingress --group-name launch-wizard-3  --protocol tcp --port 22   --cidr 138.36.230.92/32
