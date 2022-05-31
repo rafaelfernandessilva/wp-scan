@@ -22,7 +22,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-session-name: ${{ secrets.AWS_REGION }}
         
-      - name: Teste Connection AWS
+      - name: Remove IP
         run: |
           aws ec2 revoke-security-group-ingress --group-id sg-04d9ca0541efd2157 --protocol tcp --port 22 --cidr 138.36.230.92/32
 
