@@ -1,28 +1,18 @@
-name: REMOVE IP
+name: ceps workflow
 
-on:
-
+on: 
   push:
-    branches:  
-      [main]   
-jobs:
-  Remove-IP:
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    environment: personal
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v3
-      - name: 'Configure AWS credentials'
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          role-session-name: ${{ secrets.AWS_REGION }}
-        
-      - name: Remove IP
-        run: |
-          aws ec2 revoke-security-group-ingress --group-id sg-04d9ca0541efd2157 --protocol tcp --port 22 --cidr 138.36.230.92/32
+    branches:
+      - main
+      
 
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@HEAD
+        with:
+          working-directory: examples/yarn
+      - run: npm t
+        working-directory: examples/yarn
