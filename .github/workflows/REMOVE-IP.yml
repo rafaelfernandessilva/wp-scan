@@ -6,16 +6,15 @@ on:
       - main
       
 jobs:
-  lint:
+  test:
     runs-on: ubuntu-latest
+    environment: develop
     steps:
-    - uses: actions/checkout@v1
+      - name: deploy teste cep
+        uses:   actions/checkout@v3
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
 
-    - uses: c-hive/gha-yarn-cache@v2
-      # with:
-        # directory: server # Optional, speficy the folder of yarn.lock if not in the root directory
-
-    - name: Install JS dependencies
-      run: yarn install
-    - name: Test
-      run: yarn test
+      - name: Dependencies install
+        run: npm install
