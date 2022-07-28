@@ -18,5 +18,5 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
-          role-session-name: ${{ secrets.AWS_REGION }}
+          role-session-name: ${{ secrets.AWS_NAME }}
       
