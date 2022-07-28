@@ -4,11 +4,18 @@ on:
   push:
     branches:
       - main
+      permissions:
 
 jobs: 
   ecr:
+
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    
     environment: personal
+
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3
@@ -16,7 +23,7 @@ jobs:
       - name: 'Configure AWS credentials'
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::459826126373:role/ecr-test
-          aws-region: us-east-1
-          role-session-name: ecr-test
+          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-session-name: ${{ secrets.AWS_REGION }}
       
