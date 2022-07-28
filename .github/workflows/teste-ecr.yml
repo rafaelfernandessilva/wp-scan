@@ -27,3 +27,6 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-session-name: "us-east-1"
       
+      - name: Teste Connection AWS
+        run: |
+          echo ${{ secrets.AWS_ASSUME_ROLE }}
