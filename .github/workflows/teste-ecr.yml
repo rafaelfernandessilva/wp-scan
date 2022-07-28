@@ -9,7 +9,7 @@ jobs:
   ecr:
     runs-on: ubuntu-latest
     environment: ecr-lab
-  steps:
+    steps:
     - name: 'Checkout'
         uses: actions/checkout@v3
 
@@ -22,4 +22,3 @@ jobs:
     
     - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v1
-        
