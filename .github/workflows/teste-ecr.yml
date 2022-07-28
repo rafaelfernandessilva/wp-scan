@@ -14,7 +14,7 @@ jobs:
       id-token: write
       contents: read
     
-    environment: ecr-lab
+    environment: personal
 
     steps:
       - name: 'Checkout'
