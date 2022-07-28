@@ -23,10 +23,8 @@ jobs:
       - name: 'Configure AWS credentials'
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          role-session-name: "us-east-1"
+          role-to-assume: arn:aws:iam::459826126373:role/ecr-test
+          aws-region: us-east-1
+          role-session-name: ecr-test
       
-      - name: Teste Connection AWS
-        run: |
-          echo ${{ secrets.AWS_ASSUME_ROLE }}
+    
