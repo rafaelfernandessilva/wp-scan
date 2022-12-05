@@ -1,11 +1,6 @@
-name: ceps workflow
-
-on: 
-  push:
-    branches:
-      - main
-      
-
+name: teste manual workflow
+on: [workflow_dispatch]
+    
 jobs: 
   ecr:
 
