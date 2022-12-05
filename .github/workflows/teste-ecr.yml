@@ -1,5 +1,5 @@
-name: teste manual workflow
-on: [workflow_dispatch]
+name: manual workflow
+on: workflow_dispatch
     
 jobs: 
   ecr:
