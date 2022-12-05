@@ -1,4 +1,4 @@
-name: manual workflow
+name: manual workflow develop branch
 on: workflow_dispatch
     
 jobs: 
